@@ -1,0 +1,26 @@
+# =========================
+# API GATEWAY (Node.js)
+# =========================
+api-gateway/node_modules/
+api-gateway/.env
+
+# =========================
+# ML SERVICE (Python)
+# =========================
+ml-service/__pycache__/
+ml-service/venv/
+ml-service/env/
+*.pyc
+
+# =========================
+# DATOS, MODELOS Y GRÁFICOS
+# =========================
+# Si la carpeta 'data/' almacena archivos pesados (CSV, JSON) de la API de EEUU, es mejor ignorarlos:
+ml-service/data/*
+!ml-service/data/.gitkeep 
+
+# Si las imágenes del árbol de decisión cambian con cada entrenamiento, ignóralas:
+ml-service/*.png
+
+# Opcional: Si los modelos guardados son muy pesados (+100MB), descomenta la siguiente línea:
+# ml-service/models/*.pkl
